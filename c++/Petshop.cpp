@@ -3,6 +3,7 @@
 #include <list>
 
 //// halow
+//// hi
 
 using namespace std; // supaya tidak harus tulis std:: pada fungsi seperti cout, cin, string
 
