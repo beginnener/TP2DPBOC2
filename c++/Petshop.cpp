@@ -5,7 +5,7 @@
 using namespace std; // supaya tidak harus tulis std:: pada fungsi seperti cout, cin, string
 
 class Petshop{
-    private :
+    protected :
     int ID;
     string nama_produk;
     int harga_produk;
@@ -18,7 +18,7 @@ class Petshop{
         this->stok_produk = 0; // set 0 konstruktor harga
     }
 
-    Petshop(int id, string produk, string kategori, int harga, int stok) : ID(id), nama_produk(produk), harga_produk(harga), stok_produk(stok) {} // constructor dengan parameter
+    Petshop(int id, string produk, int harga, int stok) : ID(id), nama_produk(produk), harga_produk(harga), stok_produk(stok) {} // constructor dengan parameter
 
     // getter setter
     int get_ID()const { return this->ID; } // const disini berguna supaya nilai dari variabel dipastikan tidak dapat diubah secara sengaja ataupun tidak sengaja, karena fungsi get hanya read-only
@@ -33,4 +33,6 @@ class Petshop{
     int get_stok() const { return this->stok_produk; }
     void set_stok(int stok){ this->stok_produk = stok; }
 
+    //destructor
+    ~Petshop();
 };
