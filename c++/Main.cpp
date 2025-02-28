@@ -1,7 +1,5 @@
 #include "Petshop.cpp"
 
-int Petshop::NextID = 1; // inisialisasi dan akses variabel statis dari kelas (classname::method/static var)
-
 int main() {
     list<Petshop> petshopList; // inisialisasi list petshop
     int pilih;
