@@ -8,8 +8,6 @@ class Baju : public Aksesoris{
     string merk;
 
     public:
-    
-    
     Baju(){
         this->untuk_hewan = "";
         this->size = "";
