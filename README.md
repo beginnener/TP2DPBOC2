@@ -22,15 +22,15 @@ Saya Natasha Adinda Cantika dengan NIM 2312120 mengerjakan TP2 dalam mata kuliah
 
 ### CPP
 <p align="left">
-  <img src="readmeimg/ss cpp.png" width="300">
+  <img src="readmeimg/ss cpp.png" width="500">
 </p>
 
 ### Java
 <p align="left">
-  <img src="readmeimg/ss java.png" width="300">
+  <img src="readmeimg/ss java.png" width="500">
 </p>
 
 ### Python
 <p align="left">
-  <img src="readmeimg/ss py.png" width="300">
+  <img src="readmeimg/ss py.png" width="500">
 </p>
