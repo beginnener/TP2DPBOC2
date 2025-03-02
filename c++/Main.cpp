@@ -14,7 +14,6 @@ int main() {
         Baju("Anjing","XL", "Dogtober" ,"Kaos", "Cotton", "Hijau", "t-shirt", 208000, 40),
     };
 
-    //string untukHewan, string size, string merk, string jenis, string bahan, string warna, string namaProduk, int hargaProduk, int stokProduk
     cout << "Selamat Datang di Petshop DPBO!" << endl;
     Baju::Display(listbaju);
     cout << "Masukan input dengan urutan <untuk> <size> <merk> <jenis> <bahan> <warna> <nama produk, gunakan tanda kutip dua jika nama memiliki spasi> <harga> <stok>" << endl;
