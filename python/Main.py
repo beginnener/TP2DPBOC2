@@ -1,41 +1,53 @@
-from Petshop import Petshop
+from Baju import Baju
+
+
 
 def main():
-    petshop_list = []
+    listbaju = [
+        Baju("Kucing", "M", "CatHolic", "Dress", "Linen", "Putih", "baju", 170000, 50),
+        Baju("Kucing", "L", "CatHolic", "Dress", "Linen", "Putih", "baju", 180000, 70),
+        Baju("Kucing", "S", "CatHolic", "Dress", "Linen", "Putih", "baju", 170000, 50),
+        Baju("Anjing", "L", "Dogtober", "Kaos", "Cotton", "Hijau", "t-shirt", 200000, 40),
+        Baju("Anjing", "XL", "Dogtober", "Kaos", "Cotton", "Hijau", "t-shirt", 208000, 40),
+    ]
+    
+    print("Selamat Datang di Petshop DPBO!")
+    Baju.display(listbaju)
+    print("Masukkan input dengan urutan <untuk> <size> <merk> <jenis> <bahan> <warna> \"nama produk\" <harga> <stok>")
+    print("Ketik 'out' untuk keluar dari program")
+    
     while True:
-        print("\n===== MENU PETSHOP DPBO =====")
-        print("1. Tambah Produk")
-        print("2. Tampilkan Produk")
-        print("3. Update Produk")
-        print("4. Hapus Produk")
-        print("5. Keluar")
-        
-        pilihan = input("Masukkan pilihan (contoh: 1): ")
-        
-        if pilihan == "1":
-            produk = input("Masukkan Nama Produk: ")
-            kategori = input("Masukkan Kategori Produk: ")
-            harga = int(input("Masukkan Harga Produk: "))
-            Petshop.add_attribute(petshop_list, produk, kategori, harga)
-        elif pilihan == "2":
-            Petshop.display_attributes(petshop_list)
-        elif pilihan == "3":
-            id_produk = int(input("Masukkan ID Produk yang ingin diupdate: "))
-            produk = input("Masukkan Nama Produk baru (kosongkan jika tidak ingin diubah): ")
-            kategori = input("Masukkan Kategori Produk baru (kosongkan jika tidak ingin diubah): ")
-            harga = input("Masukkan Harga Produk baru (kosongkan jika tidak ingin diubah): ")
-            
-            new_harga = int(harga) if harga.isdigit() else 0
-            Petshop.update_attribute(petshop_list, id_produk, produk, kategori, new_harga)
-        elif pilihan == "4":
-            id_produk = int(input("Masukkan ID Produk yang ingin dihapus: "))
-            Petshop.delete_attribute(petshop_list, id_produk)
-        elif pilihan == "5":
-            print("Keluar dari program...")
+        input_data = input("Add to Petshop> ")
+        # jika input "out"
+        if input_data.lower() == "out":
             break
-        else:
-            print("Pilihan tidak valid!")
-
+        # jika input "show"
+        elif input_data.lower() == "show":
+            Baju.display(listbaju)
+            continue
+        # jika input add
+        elif input_data.lower().startswith("add "):  
+            parts = input_data.split(' ')[1:]  # Ambil bagian setelah "add"
+            if len(parts) < 8:
+                print("Input tidak valid! Pastikan format sesuai.")
+                continue
+            
+            untuk, size, merk, jenis, bahan, warna = parts[:6]
+            
+            # gabungkan nama produk yang mungkin memiliki spasi
+            nama_index_start = input_data.index('"') + 1
+            nama_index_end = input_data.rindex('"')
+            nama = input_data[nama_index_start:nama_index_end]
+            
+            try:
+                harga, stok = map(int, parts[-2:])
+                listbaju.append(Baju(untuk, size, merk, jenis, bahan, warna, nama, harga, stok))
+                print("Baju berhasil ditambahkan!")
+                Baju.display(listbaju)
+            except ValueError:
+                print("Input tidak valid! Pastikan format angka benar.")
+        
+    print("Terima kasih telah menggunakan Petshop DPBO!")
 
 if __name__ == "__main__":
     main()
