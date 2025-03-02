@@ -2,7 +2,7 @@ Saya Natasha Adinda Cantika dengan NIM 2312120 mengerjakan TP2 dalam mata kuliah
 
 ## Diagram
 <p align="center">
-  <img src="images/TP2DPBO.drawio.png" width="200">
+  <img src="readmeimg/TP2DPBO.drawio.png" width="200">
 </p>
 
 ## Penjelasan Alur
@@ -22,15 +22,15 @@ Saya Natasha Adinda Cantika dengan NIM 2312120 mengerjakan TP2 dalam mata kuliah
 
 ### CPP
 <p align="left">
-  <img src="images/ss cpp.png" width="300">
+  <img src="readmeimg/ss cpp.png" width="300">
 </p>
 
 ### Java
 <p align="left">
-  <img src="images/ss java.png" width="300">
+  <img src="readmeimg/ss java.png" width="300">
 </p>
 
 ### Python
 <p align="left">
-  <img src="images/ss py.png" width="300">
+  <img src="readmeimg/ss py.png" width="300">
 </p>
